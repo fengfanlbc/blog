@@ -17,7 +17,7 @@ menu:
 avatar: http://odbihfqll.bkt.clouddn.com/u=738958558,2199681430&fm=21&gp=0.jpg
 
 # Small icon of Your site | 站点小图标地址
-favicon: /favicon.png
+favicon: http://odbihfqll.bkt.clouddn.com/f.png
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -119,7 +119,6 @@ youyan:
 ## "0": white-gray background | 淳朴灰白背景
 background_image: 0
 
-# Base Font Size | 字号调节
 base_font_size: 16  #px, 16 - 24
 
 ## General Color Scheme | 主题配色方案 
@@ -177,7 +176,7 @@ limit_article_width:
 
 # 是否开启边栏多标签切换
 # Birdhouse button in left column
-tagcloud: true
+tagcloud: false
 
 # Blogroll, Link exchange | 友情链接
 friends:
@@ -245,7 +244,7 @@ mathjax: false
 
 # Socail Share | 是否开启分享
 share: 
-  on: true
+  on: false
   baidu: true
   addthis: false
   addthis_pubid: "ra-56ff76c972fc0cf9"
