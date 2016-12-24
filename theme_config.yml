@@ -40,11 +40,11 @@ since: 2016
 ## https://github.com/hexojs/hexo-generator-feed
 
 subnav:
-  Email: "mailto:123@123.com"
+  Email: "mailto:fengfanbupt@qq.com"
   #新浪微博: "sina weibo"
-  GitHub: "#"
+  GitHub: "https://github.com/fengfanlbc"
   #V2EX: "#"
-  RSS: "/atom.xml"
+  #RSS: "/atom.xml"
   #知乎: "zhihu"
   #豆瓣: "douban"
   #简书: "jianshu"
@@ -126,9 +126,9 @@ base_font_size: 16  #px, 16 - 24
 color_scheme: 
 
 highlight_style:
-  #on: true
+  on: true
   inline_code: 1  # Value: 0 - 9 可选
-  code_block: 1  # Value: 0 - 4 
+  code_block: 2  # Value: 0 - 4 
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式
