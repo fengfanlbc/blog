@@ -12,14 +12,14 @@ description: "在云服务器上安装配置tomcat，MySQL，将项目部署至�
 <br/>
 
 
-我们在本地调试好web项目后，往往需要把项目放到云服务器上以供外网访问并测试，同时通过git版本控制器管理项目，使得项目开发更加便捷。以下是部署的详细流程以供参考。
+我们在本地调试好web项目后，往往需要把项目放到云服务器上以供外网访问并测试，同时通过**git**版本控制器管理项目，使得项目开发更加便捷。以下是部署的详细流程以供参考。
 初次主要步骤包括：
 >* 配置java运行环境
 >* 安装MySQL并设置远程登入
 >* 安装Tomcat，并配置环境
 >* 将web项目部署到Tomcat
 
-我用的是阿里云服务器进行部署的，首先通过ssh登入，这是登入后的页面
+我用的是阿里云服务器进行部署的，首先通过**ssh**登入，这是登入后的页面
 
 ![pic1](http://odbihfqll.bkt.clouddn.com/Image.png)
 
@@ -71,13 +71,13 @@ echo $JAVA_HOME
 ![pic3](http://odbihfqll.bkt.clouddn.com/Image3.png)
 
 这样java环境就配置好了
-## 安装MySQL并设置远程登入
+## MySQL安装和配置
 项目运行必然要涉及数据库，我想把数据库也部署在该台服务器上，但实际是可以分开部署的。首先我们安装mysql。
 直接运行指令：
 ```command
 sudo apt-get install mysql-server mysql-client
 ```
-在安装过程中会让你设置root用户密码（这里是管理mysql的用户非Linux用户）安装好后，使用mysql -uroot -p指令进行Mysql登入测试：
+在安装过程中会让你设置root用户密码（这里是管理mysql的用户非Linux用户）安装好后，使用`mysql -uroot -p`指令进行Mysql登入测试：
 
 ![pic4](http://odbihfqll.bkt.clouddn.com/Image11.png)
 
@@ -99,16 +99,16 @@ root：授予root账号。
 “password”：分配账号对应的密码，这里密码自己替换成你的mysql root帐号密码。
 ```
 然后刷新一下，执行：
-```command
+```
 flush privileges;
 ```
 最后重启:
 ```command
 MySQL: sudo /etc/init.d/mysql restart
 ```
-这样应该就可以远程登入了，这里推荐使用workbench工具远程登入并进行数据库操作，方便快捷~（最后还要设置一下编码，一般设为utf8，这个自行google~）
+这样应该就可以远程登入了，这里推荐使用**workbench**工具远程登入并进行数据库操作，方便快捷~（最后还要设置一下编码，一般设为utf8，这个自行google~）
 
-## 安装Tomcat，并配置环境
+## Tomcat配置
 我这里安装的是tomcat7，建议在另一台电脑上下好安装包后，使用ftp工具发送给服务器。
 
 ![pic6](http://odbihfqll.bkt.clouddn.com/Image4.png)
@@ -126,13 +126,13 @@ MySQL: sudo /etc/init.d/mysql restart
 
 ![pic9](http://odbihfqll.bkt.clouddn.com/Image7.png)
 
-然后我们在浏览器访问http://IP:8080,就可以访问熟悉的tomcat默认主页了。关闭时运行 ./shutdown.sh即可。
+然后我们在浏览器访问http://serverip:8080/  就可以访问熟悉的tomcat默认主页了。关闭时运行 ./shutdown.sh即可。
 
 ![pic10](http://odbihfqll.bkt.clouddn.com/Image8.png)
 
 我们可以进如tomcat服务器的logs目录，打开catalina.out进行查看，这里面记录了tomcat的日志信息，出错后可以看看。
 
-## 将web项目部署到Tomcat
+## 项目部署
 将写好的java web项目通过eclipse导出成war包，再将war包通过ftp工具导出到tomcat目录下的webapp目录下:
 
 ![pic11](http://odbihfqll.bkt.clouddn.com/Image9.png)
@@ -141,7 +141,7 @@ tomcat会自动解压webapp下的war包，然后我们开启tomcat，tomcat会�
 
 ![pic12](http://odbihfqll.bkt.clouddn.com/Image10.png)
 
-这里要注意，当我同时导入两个war包（也就是一个tomcat下导入两个项目）的情况下会报端口占用错误，此问题还有待解决，所以建议，一次就导入一个包。当想删除项目时，也是比较麻烦的，注意，不仅仅要删除webapp下的项目，还要删除work目录下的所有文件，再重新运行。
+这里要注意，当我同时导入两个war包（也就是一个tomcat下导入两个项目）的情况下会报端口占用错误，此问题还有待解决，所以建议，一次就导入一个包。当想删除项目时，也是比较麻烦的，**注意**，不仅仅要删除webapp下的项目，还要删除work目录下的所有文件，再重新运行。
 
 ## 总结
 按照这几个步骤搭建好后，基本上就可以完成整个的项目部署工作了，但是为了之后的开发调试方便，我们需要使用git进行版本控制，我会在以后进行说明。
