@@ -2,7 +2,7 @@
 title: 利用gitpage和hexo搭建一个个人博客
 date: 2016-09-15 09:46:34
 tags: blog hexo
-description: "Welcome to my blog! This is my first post."
+description: "基于gitpage搭建一个个人博客"
 
 ---
 
@@ -18,7 +18,7 @@ description: "Welcome to my blog! This is my first post."
 > * 配置环境：安装Node，安装Git
 > * 安装hexo
 > * 注册一个github账户
-> * 创建一个名字为：yourAccount.github.io的仓库
+> * 创建仓库
 > * 将hexo部署到gitpage上
 > * 创建第一篇博客
 > * 选择一个自己喜欢的主题
@@ -77,7 +77,7 @@ Hexo是一个静态博客生成器，用node.js开发，作者是一名台湾大
 
 [Markdown 教程](https://www.zybuluo.com/mdeditor)
 
-我觉得可以一遍写一遍学，这个语法应该不难，接下来在blog文件夹里用如下指令创建自己的第一篇博文：
+我觉得可以一边写一边学，这个语法应该不难，接下来在blog文件夹里用如下指令创建自己的第一篇博文：
 
 `hexo new "your blog name"`
 
