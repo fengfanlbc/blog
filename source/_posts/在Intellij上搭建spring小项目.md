@@ -2,16 +2,14 @@
 title: 在IntelliJ上搭建spring小项目
 date: 2017-01-10 10:40:11
 tags: JavaWeb
-description: IntelliJ上通过Maven搭建一个spring项目，同时解决导致Maven搭建速度慢的问题
+
 ---
 
-<!-- more -->
 
-*"we only live once"*
-
-<br/>
 
 通过学校邮箱进行注册可以免费下载Intellij， 功能多而全，确实十分好用，它和Eclipse就好像是大教堂和集市一样， 它们有各自的优缺点， 但我觉的从开发的快捷性上来讲， intellij还是更加好用的（毕竟是要花钱的东西）。但对于初次上手Intellij的童鞋来说确实有很多蛋疼的地方，所以在这里通过一个完整的示例来详细说明一下，其中最主要的是解决maven下载慢的问题。
+
+<!-- more -->
 
 首先新建一个工程，如图所示，选择Maven，勾选create from archetype，并选择如图所示的archetype再点击next，这里表示创建具有webapp项目骨架的Maven项目
 
@@ -116,4 +114,4 @@ description: IntelliJ上通过Maven搭建一个spring项目，同时解决导致
 可以点击下载[项目源码][1]，最好自己敲一遍，这里要说明下，pom.xml里junit依赖的**scope**是test，这就意味着在java目录下的程序是无法直接使用单元测试的，这里我是建了一个测试目录test实现单元测试的，如果嫌麻烦可以直接把scope属性改为compile，这样就可以直接使用了。这里其实只是一个spring的小项目，并不涉及web，但是为了以后的开发建成了web项目，不影响测试和学习。
 
 
-  [1]: http://pan.baidu.com/s/1o899Nmi
+[1]: http://pan.baidu.com/s/1o899Nmi

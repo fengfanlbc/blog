@@ -2,16 +2,13 @@
 title: IntelliJ-Maven-Spark-Scala
 date: 2017-05-11 10:52:38
 tags: Spark
-description: IntelliJ+Maven+Scala+Spark
 ---
-<!--more -->
-*"we only live once"*
-
-<br/>
 
 在学习 *Spark* 的时候，如果有一个好的简便的开发工具和固定的流程，会使得学习更加简单， 这里要介绍的就是在查找和尝试各种开发流程后总结出来的经验。
 
 首先我假定已经安装好了 Intellij，以及*Scala* 插件。第一步需要下载 Spark（我下的是**spark-2.1.1-bin-hadoop2.7**）以及对应的 Scala（2.11.0），这两个的安装过程比较简单就不介绍了，安装后配置环境变量并运行 *Spark-shell* 进行简单的测试。这里重点讲的是环境搭建好后如何在Intellij 平台上高效开发。
+
+<!--more -->
 
 首先打开 Intellij 后新建 maven 项目，这里要注意，需要 **Add Archetype**，这里要添加maven-scala-plugin，Intellij 默认的总是出各种问题。这个信息可以在 maven repository 中查看到。
 

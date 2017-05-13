@@ -2,18 +2,16 @@
 title: 在云服务器上使用tomcat部署java web项目
 date: 2016-12-24 20:36:39
 tags: JavaWeb
-description: "在云服务器上安装配置tomcat，MySQL，将项目部署至云服务器上"
 ---
 
-<!-- more -->
-
-*"we only live once"*
-
-<br/>
 
 
 我们在本地调试好web项目后，往往需要把项目放到云服务器上以供外网访问并测试，同时通过**git**版本控制器管理项目，使得项目开发更加便捷。以下是部署的详细流程以供参考。
+
+<!-- more -->
+
 初次主要步骤包括：
+
 >* 配置java运行环境
 >* 安装MySQL并设置远程登入
 >* 安装Tomcat，并配置环境
